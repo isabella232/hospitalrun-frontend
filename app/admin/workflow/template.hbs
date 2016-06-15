@@ -1,0 +1,13 @@
+<h1>hello world</h1>
+{{#edit-panel editPanelProps=editPanelProps}}
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      {{#em-form model=model submitButton=false }}
+        {{em-checkbox label=(t 'admin.address.include1_label') property="value.address1Include"}}
+        {{em-checkbox label=(t 'admin.address.include2_label') property="value.address2Include"}}
+        {{em-checkbox label=(t 'admin.address.include3_label') property="value.address3Include"}}
+        {{em-checkbox label=(t 'admin.address.include4_label') property="value.address4Include"}}
+      {{/em-form}}
+    </div>
+  </div>
+{{/edit-panel}}
