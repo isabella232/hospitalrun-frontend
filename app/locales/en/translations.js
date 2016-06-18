@@ -214,7 +214,13 @@ export default {
       outpatient_imaging_prepayment_required_label: 'Outpatient Imaging prepayment required',
       outpatient_medication_prepayment_required_label: 'Outpatient Medication prepayment required',
       new_title: 'Payment Workflow',
-      edit_title: 'Payment Workflow'
+      edit_title: 'Payment Workflow',
+      messages: {
+        workflow_saved: 'The payment workflow has been saved.'
+      },
+      titles: {
+        options_saved: 'Options Saved'
+      }
     }
   },
   labels: {

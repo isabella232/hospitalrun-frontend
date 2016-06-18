@@ -7,15 +7,18 @@ export default AbstractEditRoute.extend({
   editTitle: t('admin.payment_workflow.edit_title'),
   model: function() {
     return new Ember.RSVP.Promise(function(resolve) {
-      this.get('store').find('option', 'address_options').then(function(addressOptions) {
+      this.get('store').find('option', 'payment_workflow_options').then(function(addressOptions) {
         resolve(addressOptions);
       }, function() {
         var store = this.get('store');
         var newConfig = store.push(store.normalize('option', {
-          id: 'address_options',
+          id: 'payment_workflow_options',
           value: {
-            address1Label: this.get('i18n').t('admin.address.address_label'),
-            address1Include: true
+            admissionDepositRequired: false,
+            followupPrepaymentRequired: false,
+            labPrepaymentRequired: false,
+            imagingPrepaymentRequired: false,
+            medicationPrepaymentRequired: false
           }
         }));
         resolve(newConfig);
