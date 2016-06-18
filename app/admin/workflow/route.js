@@ -7,8 +7,8 @@ export default AbstractEditRoute.extend({
   editTitle: t('admin.payment_workflow.edit_title'),
   model: function() {
     return new Ember.RSVP.Promise(function(resolve) {
-      this.get('store').find('option', 'payment_workflow_options').then(function(addressOptions) {
-        resolve(addressOptions);
+      this.get('store').find('option', 'payment_workflow_options').then(function(workflowOptions) {
+        resolve(workflowOptions);
       }, function() {
         var store = this.get('store');
         var newConfig = store.push(store.normalize('option', {

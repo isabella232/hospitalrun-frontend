@@ -92,3 +92,26 @@ test('Update address options', function(assert) {
   });
 });
 
+test('Update workflow options', function(assert) {
+  runWithPouchDump('admin', function() {
+    authenticateUser();
+    visit('/admin/workflow');
+    andThen(function() {
+      assert.equal(currentURL(), '/admin/workflow');
+      click('input:checkbox:eq(0)');
+      click('button:contains(Update)');
+      andThen(() => {
+        waitToAppear('.modal-dialog');
+        andThen(() => {
+          assert.equal(find('.modal-title').text(), 'Options Saved', 'Workflow Options Saved');
+          visit('/admin/workflow');
+          andThen(function() {
+            assert.equal(currentURL(), '/admin/workflow');
+            assert.ok(find('input:checkbox:eq(0)').is(':checked'), 'Admission deposit required - checked');
+            assert.notOk(find('input:checkbox:eq(1)').is(':checked'), 'Followup prepayment required - unchecked');
+          });
+        });
+      });
+    });
+  });
+});
