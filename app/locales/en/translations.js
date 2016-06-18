@@ -207,12 +207,14 @@ export default {
         role_saved: 'Role Saved'
       }
     },
-    workflow: {
-      admission_deposit_required: 'Admission deposit required',
-      followup_prepayment_required: 'Followup prepayment required',
-      outpatient_lab_prepayment_required: 'Outpatient Lab prepayment required',
-      outpatient_imaging_prepayment_required: 'Outpatient Imaging prepayment required',
-      outpatient_medication_prepayment_required: 'Outpatient Medication prepayment required'
+    payment_workflow: {
+      admission_deposit_required_label: 'Admission deposit required',
+      followup_prepayment_required_label: 'Followup prepayment required',
+      outpatient_lab_prepayment_required_label: 'Outpatient Lab prepayment required',
+      outpatient_imaging_prepayment_required_label: 'Outpatient Imaging prepayment required',
+      outpatient_medication_prepayment_required_label: 'Outpatient Medication prepayment required',
+      new_title: 'Payment Workflow',
+      edit_title: 'Payment Workflow'
     }
   },
   labels: {
