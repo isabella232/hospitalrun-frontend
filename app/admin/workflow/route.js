@@ -3,8 +3,8 @@ import Ember from 'ember';
 import { translationMacro as t } from 'ember-i18n';
 export default AbstractEditRoute.extend({
   hideNewButton: true,
-  newTitle: t('admin.address.new_title'),
-  editTitle: t('admin.address.edit_title'),
+  newTitle: t('admin.payment_workflow.new_title'),
+  editTitle: t('admin.payment_workflow.edit_title'),
   model: function() {
     return new Ember.RSVP.Promise(function(resolve) {
       this.get('store').find('option', 'address_options').then(function(addressOptions) {
