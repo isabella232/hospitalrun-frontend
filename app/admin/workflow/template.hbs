@@ -1,12 +1,12 @@
-<h1>hello world</h1>
 {{#edit-panel editPanelProps=editPanelProps}}
   <div class="panel panel-primary">
     <div class="panel-body">
       {{#em-form model=model submitButton=false }}
-        {{em-checkbox label=(t 'admin.address.include1_label') property="value.address1Include"}}
-        {{em-checkbox label=(t 'admin.address.include2_label') property="value.address2Include"}}
-        {{em-checkbox label=(t 'admin.address.include3_label') property="value.address3Include"}}
-        {{em-checkbox label=(t 'admin.address.include4_label') property="value.address4Include"}}
+        {{em-checkbox label=(t 'admin.workflow.admission_deposit_required') property="value.address1Include"}}
+        {{em-checkbox label=(t 'admin.workflow.followup_prepayment_required') property="value.address2Include"}}
+        {{em-checkbox label=(t 'admin.workflow.outpatient_lab_prepayment_required') property="value.address3Include"}}
+        {{em-checkbox label=(t 'admin.workflow.outpatient_imaging_prepayment_required') property="value.address4Include"}}
+        {{em-checkbox label=(t 'admin.workflow.outpatient_medication_prepayment_required') property="value.address5Include"}}
       {{/em-form}}
     </div>
   </div>
