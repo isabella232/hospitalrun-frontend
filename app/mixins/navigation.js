@@ -281,7 +281,7 @@ export default Ember.Mixin.create({
           capability: 'user_roles'
         },
         {
-          title: 'Workflow',
+          title: 'Payment Workflow',
           iconClass: 'octicon-chevron-right',
           route: 'admin.workflow',
           capability: 'update_config'

@@ -37,7 +37,8 @@ export default {
       new_user: 'New User',
       admitted_patients: 'Admitted Patients',
       missed: 'Missed',
-      user_roles: 'User Roles'
+      user_roles: 'User Roles',
+      payment_workflow: 'Payment Workflow'
     },
     actions: {
       logout: 'Logout',
